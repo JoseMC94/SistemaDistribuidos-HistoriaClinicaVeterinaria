@@ -12,8 +12,6 @@ namespace VeterinariaServices
         [DataMember]
         public String Nombre { get; set; }
 
-        
-
         [DataMember]
         public String Sexo { get; set; }
 
