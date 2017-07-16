@@ -17,7 +17,6 @@ namespace VeterinariaServices
 
         [DataMember]
         public String Raza { get; set; }
-
         [DataMember]
         public String NombreDuenio { get; set; }
         [DataMember]

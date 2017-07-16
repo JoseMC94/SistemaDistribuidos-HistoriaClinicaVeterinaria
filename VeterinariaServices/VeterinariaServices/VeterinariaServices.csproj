@@ -46,14 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cita.cs" />
-    <Compile Include="CitaService.cs" />
     <Compile Include="Diagnostico.cs" />
     <Compile Include="HistoriaClinica.cs" />
-    <Compile Include="ICitaService.cs" />
-    <Compile Include="IHistoriaClinicaService.cs" />
-    <Compile Include="IDiagnosticoService.cs" />
-    <Compile Include="IPacienteService.cs" />
-    <Compile Include="IVeterinarioService.cs" />
     <Compile Include="Paciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Veterinario.cs" />
