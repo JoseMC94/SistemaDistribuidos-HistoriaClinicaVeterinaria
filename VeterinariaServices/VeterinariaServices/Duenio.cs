@@ -8,24 +8,18 @@ using System.Threading.Tasks;
 namespace VeterinariaServices
 {
     [DataContract]
-    class Diagnostico
+    class Duenio
     {
         [DataMember]
-        public int idDiagnostico { get; set; }
-
+        public int idDuenio { get; set; }
         [DataMember]
-        public int dniDuenio { get; set; }
-
+        public String dni { get; set; }
         [DataMember]
-        public String Enfermedad { get; set; }
-
+        public String nombre { get; set; }
         [DataMember]
-        public String Medicina { get; set; }
-
+        public String telefono { get; set; }
         [DataMember]
-        public int veterinario { get; set; }
-
-
+        public String direccion { get; set; }
 
     }
 }

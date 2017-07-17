@@ -22,8 +22,9 @@ namespace VeterinariaServices
         public String fechaCita { get; set; }
 
         [DataMember]
-        public int idPaciente { get; set; }
+        public int dniDuenio { get; set; }
 
-        public int consultorio { get; set; }
+        [DataMember]
+        public int numConsultorio { get; set; }
     }
 }

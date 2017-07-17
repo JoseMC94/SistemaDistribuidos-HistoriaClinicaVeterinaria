@@ -7,23 +7,15 @@ using System.Threading.Tasks;
 namespace VeterinariaServices
 {
     [DataContract]
-    class Paciente
+    class Mascota
     {
         [DataMember]
         public String Nombre { get; set; }
-
-        [DataMember]
-        public String Sexo { get; set; }
-
         [DataMember]
         public String Raza { get; set; }
         [DataMember]
-        public String NombreDuenio { get; set; }
+        public String Sexo { get; set; }
         [DataMember]
-        public String DireccionDuenio { get; set; }
-        [DataMember]
-        public String TelefonoDuenio { get; set; }
-        [DataMember]
-        public string DniDuenio { get; set; }
+        public String dniDuenio { get; set; }
     }
 }

@@ -46,11 +46,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cita.cs" />
+    <Compile Include="CitaService.cs" />
     <Compile Include="Diagnostico.cs" />
+    <Compile Include="DiagnosticoService.cs" />
+    <Compile Include="Duenio.cs" />
+    <Compile Include="DuenioService.cs" />
     <Compile Include="HistoriaClinica.cs" />
-    <Compile Include="Paciente.cs" />
+    <Compile Include="HistoriaClinicaService.cs" />
+    <Compile Include="ICitaService.cs" />
+    <Compile Include="IDiagnosticoService.cs" />
+    <Compile Include="IDuenioService.cs" />
+    <Compile Include="IHistoriaClinicaService.cs" />
+    <Compile Include="IMascotaService.cs" />
+    <Compile Include="IVeterinarioService.cs" />
+    <Compile Include="Mascota.cs" />
+    <Compile Include="MascotaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Veterinario.cs" />
+    <Compile Include="VeterinarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
