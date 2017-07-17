@@ -1,9 +1,147 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeterinariaServices", "VeterinariaServices\VeterinariaServices.csproj", "{4B457D43-75BD-4AE5-AD28-64471F97E1D9}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IIS", "IIS\", "{F5F3B82C-D134-4C5E-B56F-A18CE28BC6F1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{4b457d43-75bd-4ae5-ad28-64471f97e1d9}|VeterinariaServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52011"
+		Debug.AspNetCompiler.PhysicalPath = "IIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52011\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52011"
+		Release.AspNetCompiler.PhysicalPath = "IIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52011\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52011"
+		SlnRelativePath = "IIS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DiagnosticoServiceIIS", "DiagnosticoServiceIIS\", "{55BE619C-40D1-42B5-9C84-E31CE47CDE7A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{4b457d43-75bd-4ae5-ad28-64471f97e1d9}|VeterinariaServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50288"
+		Debug.AspNetCompiler.PhysicalPath = "DiagnosticoServiceIIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50288\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50288"
+		Release.AspNetCompiler.PhysicalPath = "DiagnosticoServiceIIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50288\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50288"
+		SlnRelativePath = "DiagnosticoServiceIIS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DuenioServiceIIS", "DuenioServiceIIS\", "{733F97A6-A6C6-4135-91ED-C30F0617E6E0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{4b457d43-75bd-4ae5-ad28-64471f97e1d9}|VeterinariaServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50419"
+		Debug.AspNetCompiler.PhysicalPath = "DuenioServiceIIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50419\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50419"
+		Release.AspNetCompiler.PhysicalPath = "DuenioServiceIIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50419\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50419"
+		SlnRelativePath = "DuenioServiceIIS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HistoriaClinicaServiceIIS", "HistoriaClinicaServiceIIS\", "{7589D946-C54E-4094-A108-909DBD70FA28}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{4b457d43-75bd-4ae5-ad28-64471f97e1d9}|VeterinariaServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50439"
+		Debug.AspNetCompiler.PhysicalPath = "HistoriaClinicaServiceIIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50439\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50439"
+		Release.AspNetCompiler.PhysicalPath = "HistoriaClinicaServiceIIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50439\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50439"
+		SlnRelativePath = "HistoriaClinicaServiceIIS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MascotaServiceIIs", "MascotaServiceIIs\", "{360A6930-EBF2-4DB4-934C-77C7E0682D5E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{4b457d43-75bd-4ae5-ad28-64471f97e1d9}|VeterinariaServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50441"
+		Debug.AspNetCompiler.PhysicalPath = "MascotaServiceIIs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50441\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50441"
+		Release.AspNetCompiler.PhysicalPath = "MascotaServiceIIs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50441\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50441"
+		SlnRelativePath = "MascotaServiceIIs\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VeterinarioServiceIIS", "VeterinarioServiceIIS\", "{6D7427F7-900D-4B2B-9A2B-21D2DC4BA5F9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{4b457d43-75bd-4ae5-ad28-64471f97e1d9}|VeterinariaServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50442"
+		Debug.AspNetCompiler.PhysicalPath = "VeterinarioServiceIIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50442\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50442"
+		Release.AspNetCompiler.PhysicalPath = "VeterinarioServiceIIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50442\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50442"
+		SlnRelativePath = "VeterinarioServiceIIS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +153,30 @@ Global
 		{4B457D43-75BD-4AE5-AD28-64471F97E1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B457D43-75BD-4AE5-AD28-64471F97E1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B457D43-75BD-4AE5-AD28-64471F97E1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F3B82C-D134-4C5E-B56F-A18CE28BC6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F3B82C-D134-4C5E-B56F-A18CE28BC6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F3B82C-D134-4C5E-B56F-A18CE28BC6F1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F3B82C-D134-4C5E-B56F-A18CE28BC6F1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{55BE619C-40D1-42B5-9C84-E31CE47CDE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BE619C-40D1-42B5-9C84-E31CE47CDE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BE619C-40D1-42B5-9C84-E31CE47CDE7A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BE619C-40D1-42B5-9C84-E31CE47CDE7A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{733F97A6-A6C6-4135-91ED-C30F0617E6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733F97A6-A6C6-4135-91ED-C30F0617E6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733F97A6-A6C6-4135-91ED-C30F0617E6E0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{733F97A6-A6C6-4135-91ED-C30F0617E6E0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7589D946-C54E-4094-A108-909DBD70FA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7589D946-C54E-4094-A108-909DBD70FA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7589D946-C54E-4094-A108-909DBD70FA28}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7589D946-C54E-4094-A108-909DBD70FA28}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{360A6930-EBF2-4DB4-934C-77C7E0682D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360A6930-EBF2-4DB4-934C-77C7E0682D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360A6930-EBF2-4DB4-934C-77C7E0682D5E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{360A6930-EBF2-4DB4-934C-77C7E0682D5E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6D7427F7-900D-4B2B-9A2B-21D2DC4BA5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7427F7-900D-4B2B-9A2B-21D2DC4BA5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7427F7-900D-4B2B-9A2B-21D2DC4BA5F9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7427F7-900D-4B2B-9A2B-21D2DC4BA5F9}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

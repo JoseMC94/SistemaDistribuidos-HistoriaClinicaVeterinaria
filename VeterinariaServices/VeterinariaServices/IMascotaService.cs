@@ -13,7 +13,7 @@ namespace VeterinariaServices
         [OperationContract]
         void registarMascota(String nombre,String raza,String sexo,String dniDuenio);
         [OperationContract]
-        String MostrarInfoMascota(string dniDuenio);
+        String MostrarInfoMascota(String dniDuenio);
 
     }
 }

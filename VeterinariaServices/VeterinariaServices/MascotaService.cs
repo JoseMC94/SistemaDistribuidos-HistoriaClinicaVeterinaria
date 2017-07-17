@@ -10,7 +10,7 @@ namespace VeterinariaServices
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     class MascotaService : IMascotaService
     {
-        private List<Veterinario> listaMascota = new List<Veterinario>();
+        private List<Mascota> listaMascota = new List<Mascota>();
         public string MostrarInfoMascota(string dniDuenio)
         {
             var mascota = listaMascota.FirstOrDefault(x => x.dniDuenio == dniDuenio);
@@ -20,7 +20,7 @@ namespace VeterinariaServices
 
         public void registarMascota(string nombre, string raza, string sexo,string dniDuenio)
         {
-            listaMascota.Add(new Veterinario() { Nombre = nombre,Raza=raza,Sexo=sexo,dniDuenio=dniDuenio  });
+            listaMascota.Add(new Mascota() { Nombre = nombre,Raza=raza,Sexo=sexo,dniDuenio=dniDuenio  });
 
         }
 
