@@ -11,12 +11,12 @@ namespace VeterinariaServices
     interface IDuenioService
     {
         [OperationContract]
-        void RegistrarDuenio(String dni, String nombre, String direccion, String telefono);
+        void RegistrarDuenio(int dni, String nombre, String direccion, String telefono);
 
        
 
         [OperationContract]
-        String BuscarDuenio(string dniDuenio);
+        String BuscarDuenio(int dniDuenio);
 
     }
 }

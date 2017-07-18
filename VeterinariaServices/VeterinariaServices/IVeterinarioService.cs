@@ -11,6 +11,6 @@ namespace VeterinariaServices
     interface IVeterinarioService
     {
         [OperationContract]
-        void AgregarVeterinario(int dni,String nombre, String apellido,String telefono, String direccion);
+        void AgregarVeterinario(String dni,String nombre, String apellido,String telefono, String direccion);
     }
 }

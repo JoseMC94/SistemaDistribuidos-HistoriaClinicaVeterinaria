@@ -10,11 +10,14 @@ namespace VeterinariaServices
     [ServiceBehavior (InstanceContextMode = InstanceContextMode.Single)]
     class CitaService : ICitaService
     {
-        private List<Cita> listaCita = new List<Cita>();
 
+        // private List<Cita> listaCita = new List<Cita>();
+        private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
         public int AsignarCita(int dniD,String fechaC,String horaC,int numC)
         {
-            listaCita.Add(new Cita() {dniDuenio = dniD, fechaCita = fechaC,horaCita=horaC,numConsultorio=numC });
+            bd.Cita.Add(new Cita() { dniDuenio = dniD, fecha = fechaC, hora = horaC, numeroConsultorio = ""+numC });
+            bd.SaveChanges();
+            //listaCita.Add(new Cita() {dniDuenio = dniD, fechaCita = fechaC,horaCita=horaC,numConsultorio=numC });
             return numC;
         }
     }

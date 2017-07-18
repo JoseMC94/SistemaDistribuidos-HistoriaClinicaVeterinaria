@@ -10,12 +10,15 @@ namespace VeterinariaServices
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     class HistoriaClinicaService : IHistoriaClinicaService
     {
-        private List<Diagnostico> listaCuenta = new List<Diagnostico>();
+        private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
+        //private List<Diagnostico> listaCuenta = new List<Diagnostico>();
 
         public string ConsultarHistoria(int dniDuenioo)
         {
-            var diagnostico = listaCuenta.FirstOrDefault(x => x.dniDuenio == dniDuenioo);
-            return diagnostico == null ? "Historia Clinica no encontrada" : diagnostico.dniDuenio+diagnostico.Enfermedad+diagnostico.Medicina+diagnostico.veterinario;
+            var historia = bd.HistoriaClinica.Find(dniDuenioo);
+
+//            var diagnostico = listaCuenta.FirstOrDefault(x => x.dniDuenio == dniDuenioo);
+            return historia == null ? "Historia Clinica no encontrada" : historia.dniDuenio+historia.idHistoriaClinica;
 
         }
     }

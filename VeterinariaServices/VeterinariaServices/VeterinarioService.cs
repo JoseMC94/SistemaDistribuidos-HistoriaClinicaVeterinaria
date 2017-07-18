@@ -10,11 +10,12 @@ namespace VeterinariaServices
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     class VeterinarioService : IVeterinarioService
     {
-        private List<Veterinario> listaVeterinario = new List<Veterinario>();
+        private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
+        //private List<Veterinario> listaVeterinario = new List<Veterinario>();
 
-        public void AgregarVeterinario(int dni, string nombre, string apellido, string telefono, string direccion)
+        public void AgregarVeterinario(String dni, string nombre, string apellido, string telefono, string direccion)
         {
-            listaVeterinario.Add(new Veterinario() { Dni=dni, Nombre=nombre,Apellido=apellido,telefono=telefono,Direccion=direccion });
+            bd.Veterinario.Add(new Veterinario() { dniVeterinario= dni, nombre=nombre,apellido=apellido,telefono=telefono,direccion=direccion });
         }
     }
 }

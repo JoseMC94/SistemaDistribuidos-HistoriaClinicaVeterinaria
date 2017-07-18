@@ -10,13 +10,22 @@ namespace VeterinariaServices
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     class DiagnosticoService : IDiagnosticoService
     {
-        private List<Diagnostico> listaDiagnostico = new List<Diagnostico>();
+        private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
+        // private List<Diagnostico> listaDiagnostico = new List<Diagnostico>();
 
 
-        public String AgregarDiagnotico(int dniDuenio,String enfermedad,String Medicina,int dniVet)
+        public String AgregarDiagnotico(int dniVeterinario, String enfermedad, String Medicina, String idMascota)
         {
-            listaDiagnostico.Add(new Diagnostico() { dniDuenio = dniDuenio, Enfermedad = enfermedad, Medicina = Medicina, veterinario = dniVet });
-            return "Dni Dueño"+ dniDuenio +"Enfermedad"+ enfermedad +"Medicina: "+Medicina + "Veterinario: "+dniVet;
+            bd.Diagnostico.Add(new Diagnostico()
+            {
+                dniVeterianrio = dniVeterinario,
+                enfermedad = enfermedad,
+                medicina = Medicina,
+                idmascota = Int32.Parse(idMascota)
+
+            });
+            bd.SaveChanges();
+            return "Enfermedad" + enfermedad + "Medicina: " + Medicina + "Veterinario: " + dniVeterinario;
         }
     }
 }

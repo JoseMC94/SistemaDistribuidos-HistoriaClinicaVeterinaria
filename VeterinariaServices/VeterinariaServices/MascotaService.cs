@@ -10,17 +10,19 @@ namespace VeterinariaServices
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     class MascotaService : IMascotaService
     {
-        private List<Mascota> listaMascota = new List<Mascota>();
+        private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
+        //private List<Mascota> listaMascota = new List<Mascota>();
         public string MostrarInfoMascota(string dniDuenio)
         {
-            var mascota = listaMascota.FirstOrDefault(x => x.dniDuenio == dniDuenio);
-            return mascota  == null ? "Historia Clinica no encontrada" : mascota.Nombre+mascota.Raza+mascota.Sexo;
+            var mascota = bd.Mascota.Find(dniDuenio);
+            return mascota  == null ? "Historia Clinica no encontrada" : mascota.nombre+mascota.raza+mascota.sexo;
 
         }
 
-        public void registarMascota(string nombre, string raza, string sexo,string dniDuenio)
+        public void registarMascota(string nombre, string raza, string sexo, string dniDuenio)
         {
-            listaMascota.Add(new Mascota() { Nombre = nombre,Raza=raza,Sexo=sexo,dniDuenio=dniDuenio  });
+            bd.Mascota.Add(new Mascota() { nombre = nombre, raza = raza, sexo = sexo, dniDuenio = Int32.Parse(dniDuenio) });
+            //listaMascota.Add(new Mascota() { Nombre = nombre,Raza=raza,Sexo=sexo,dniDuenio=dniDuenio  });
 
         }
 
