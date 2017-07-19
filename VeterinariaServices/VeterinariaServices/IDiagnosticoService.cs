@@ -12,7 +12,7 @@ namespace VeterinariaServices
     {
 
         [OperationContract]
-        String AgregarDiagnotico(int dniVeterinario, String enfermedad, String Medicina, String idMascota);
+        String AgregarDiagnotico( String enfermedad, String Medicina, int dniVeterinario, int idMascota);
 
     }
 }

@@ -14,14 +14,14 @@ namespace VeterinariaServices
         // private List<Diagnostico> listaDiagnostico = new List<Diagnostico>();
 
 
-        public String AgregarDiagnotico(int dniVeterinario, String enfermedad, String Medicina, String idMascota)
+        public String AgregarDiagnotico( String enfermedad, String Medicina, int dniVeterinario, int idMascota)
         {
             bd.Diagnostico.Add(new Diagnostico()
             {
-                dniVeterianrio = dniVeterinario,
                 enfermedad = enfermedad,
                 medicina = Medicina,
-                idmascota = Int32.Parse(idMascota)
+                dniVeterianrio = dniVeterinario,
+                idmascota = idMascota
 
             });
             bd.SaveChanges();

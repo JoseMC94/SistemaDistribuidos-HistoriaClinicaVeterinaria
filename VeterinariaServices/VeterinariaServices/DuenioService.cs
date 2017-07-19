@@ -21,10 +21,10 @@ namespace VeterinariaServices
 
         }
 
-        public void RegistrarDuenio(int dni, string nombre, string direccion, string telefono)
+        public void RegistrarDuenio(int dni, string nombre,string apellido, string direccion, string telefono)
         {
             //listaDuenio.Add(new Duenio() { dni = dni, nombre = nombre, direccion = direccion, telefono = telefono });
-            bd.Duenio.Add(new Duenio() { dni = dni, nombre = nombre, direccion = direccion, telefono = telefono });
+            bd.Duenio.Add(new Duenio() { dni = dni, nombre = nombre,apellido=apellido, direccion = direccion, telefono = telefono });
             bd.SaveChangesAsync();
         }
     }

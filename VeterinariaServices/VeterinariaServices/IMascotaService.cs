@@ -11,9 +11,9 @@ namespace VeterinariaServices
     interface IMascotaService
     {
         [OperationContract]
-        void registarMascota(String nombre,String raza,String sexo,String dniDuenio);
+        void registarMascota(String nombre,String raza,String sexo,int dniDuenio);
         [OperationContract]
-        String MostrarInfoMascota(String dniDuenio);
+        String MostrarInfoMascota(int dniDuenio);
 
     }
 }

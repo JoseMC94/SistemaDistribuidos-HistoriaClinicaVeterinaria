@@ -13,12 +13,13 @@ namespace VeterinariaServices
         private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
         //private List<Diagnostico> listaCuenta = new List<Diagnostico>();
 
-        public string ConsultarHistoria(int dniDuenioo)
+        public string ConsultarHistoria(int idMascota)
         {
-            var historia = bd.HistoriaClinica.Find(dniDuenioo);
+            var mascota = bd.Diagnostico.Where(c => c.idmascota == idMascota).First();
+            //var historia = bd.Diagnostico.Find(dniDuenioo);
 
 //            var diagnostico = listaCuenta.FirstOrDefault(x => x.dniDuenio == dniDuenioo);
-            return historia == null ? "Historia Clinica no encontrada" : historia.dniDuenio+historia.idHistoriaClinica;
+            return mascota == null ? "Historia Clinica no encontrada" : ""+mascota.dniVeterianrio+mascota.enfermedad+mascota.medicina;
 
         }
     }

@@ -10,11 +10,11 @@
         <EntityTypeShape EntityType="HistoriaClinicaVeterinariaModel.Duenio" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HistoriaClinicaVeterinariaModel.HistoriaClinica" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HistoriaClinicaVeterinariaModel.Mascota" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="HistoriaClinicaVeterinariaModel.Veterinario" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="HistoriaClinicaVeterinariaModel.FK_Cita_Duenio" ManuallyRouted="false" />
         <AssociationConnector Association="HistoriaClinicaVeterinariaModel.FK_Diagnostico_Mascota" ManuallyRouted="false" />
         <AssociationConnector Association="HistoriaClinicaVeterinariaModel.FK_HistoriaClinica_Diagnostico" ManuallyRouted="false" />
         <AssociationConnector Association="HistoriaClinicaVeterinariaModel.FK_Mascota_Duenio" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HistoriaClinicaVeterinariaModel.DoctorVeterinario" Width="1.5" PointX="5.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

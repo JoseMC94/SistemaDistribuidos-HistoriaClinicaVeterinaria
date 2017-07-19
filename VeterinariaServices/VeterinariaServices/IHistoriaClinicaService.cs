@@ -11,6 +11,6 @@ namespace VeterinariaServices
     interface IHistoriaClinicaService
     {
         [OperationContract]
-        String ConsultarHistoria(int dniDuenioo);
+        String ConsultarHistoria(int idMascota);
     }
 }

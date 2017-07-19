@@ -12,16 +12,19 @@ namespace VeterinariaServices
     {
         private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
         //private List<Mascota> listaMascota = new List<Mascota>();
-        public string MostrarInfoMascota(string dniDuenio)
+        public string MostrarInfoMascota(int dniDuenio)
         {
-            var mascota = bd.Mascota.Find(dniDuenio);
-            return mascota  == null ? "Historia Clinica no encontrada" : mascota.nombre+mascota.raza+mascota.sexo;
-
+            var mascota = bd.Mascota.Where(c => c.dniDuenio == dniDuenio).First();
+            //var mascota = bd.Mascota.Find(dniDuenio);
+            //return duenio == null ? "No esta registrado" : duenio.dni + " existe";
+            return mascota == null ? "Informacion de la Mascota no encontrada" : mascota.nombre + " encontrado";
         }
+        
 
-        public void registarMascota(string nombre, string raza, string sexo, string dniDuenio)
+        public void registarMascota(string nombre, string raza, string sexo, int dniDuenio)
         {
-            bd.Mascota.Add(new Mascota() { nombre = nombre, raza = raza, sexo = sexo, dniDuenio = Int32.Parse(dniDuenio) });
+            bd.Mascota.Add(new Mascota() { nombre = nombre, raza = raza, sexo = sexo, dniDuenio = dniDuenio });
+            bd.SaveChanges();
             //listaMascota.Add(new Mascota() { Nombre = nombre,Raza=raza,Sexo=sexo,dniDuenio=dniDuenio  });
 
         }

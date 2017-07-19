@@ -13,9 +13,11 @@ namespace VeterinariaServices
         private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
         //private List<Veterinario> listaVeterinario = new List<Veterinario>();
 
-        public void AgregarVeterinario(String dni, string nombre, string apellido, string telefono, string direccion)
+        public void AgregarVeterinario( string nombre, string apellido, string dni, string telefono, string direccion)
         {
-            bd.Veterinario.Add(new Veterinario() { dniVeterinario= dni, nombre=nombre,apellido=apellido,telefono=telefono,direccion=direccion });
+            bd.DoctorVeterinario.Add(new DoctorVeterinario() {  nombre=nombre,apellido=apellido, dni = dni, telefono =telefono,direccion=direccion });
+            bd.SaveChanges();
+
         }
     }
 }

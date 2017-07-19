@@ -11,7 +11,7 @@ namespace VeterinariaServices
     interface IDuenioService
     {
         [OperationContract]
-        void RegistrarDuenio(int dni, String nombre, String direccion, String telefono);
+        void RegistrarDuenio(int dni, String nombre,String apellido, String direccion, String telefono);
 
        
 
