@@ -1,0 +1,36 @@
+﻿
+<h2>HistoriaClinica</h2>
+
+<div class="row">
+    <label>Codigo Mascota</label>
+    <input type="text" id="txtcodigo" />
+    <input type="button" id="btnConsultar" value="Consultar" />
+    <label id="lblResultado"></label>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnConsultar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("HistoriaClinicaConsulta", "Home")",
+                    data: { codigo: $("#txtcodigo").val()},
+                    success: function (ret) {
+                        $("#lblResultado").text(ret);
+                    }
+                });
+            });
+            $("#btnRegistrar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("HistoriaClinicaConsulta", "Home")",
+                    data: { nombre: $("#nombre").val(), raza: $("#raza").val(), sexo: $("#sexo").val(), dni: $("#dniduenio").val() },
+                    success: function (ret) {
+                        $("#lblResultado1").text(ret);
+                    }
+                });
+            });
+        });
+    </script>
+}

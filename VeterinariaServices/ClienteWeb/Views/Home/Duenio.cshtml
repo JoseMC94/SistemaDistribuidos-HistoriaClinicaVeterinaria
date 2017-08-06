@@ -1,0 +1,120 @@
+﻿
+<form class="container formu" class="form-horizontal" id="formulario" >
+    <br /><br />
+    <h1>Buscar Dueño</h1>
+
+    
+    <div class="form-group">
+        <label class="col-lg-3 control-label">DNI</label>
+        <div class="col-lg-8">
+            <input class="form-control" type="email" id="txtdni" value="" placeholder="DNI" />
+        </div>
+    </div><br />
+    <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-8">
+            <button  id="btnConsultar" type="button" class="btn btn-primary">Entrar</button>
+        </div>
+    </div><br />
+    <div class="form-group">
+        <label class="col-lg-3 control-label" id="lblResultado"></label>
+    </div><br />
+</form>    
+
+
+<form class="container" class="form-horizontal">
+    <br /><br />
+    <h1>Registrar Dueño Dueño</h1>
+    <br />
+
+   
+    <div class="form-group">
+        <label class="col-lg-3 control-label">DNI</label>
+        <div class="col-lg-8">
+            <input class="form-control" type="email" id="txtdni2"  placeholder="DNI" />
+        </div>
+    </div><br />
+    <div class="form-group">
+        <label class="col-lg-3 control-label">Nombre</label>
+        <div class="col-lg-8">
+            <input class="form-control" type="email" id="txtnombre" value="" placeholder="Nombre" />
+        </div>
+    </div><br />
+    <div class="form-group">
+        <label class="col-lg-3 control-label">Apellido</label>
+        <div class="col-lg-8">
+            <input class="form-control" type="email" id="txtapellido" value="" placeholder="Apellido" />
+        </div>
+    </div><br />
+    <div class="form-group">
+        <label class="col-lg-3 control-label">Direccion</label>
+        <div class="col-lg-8">
+            <input class="form-control" type="email" id="txtdireccion" value="" placeholder="Direccion" />
+        </div>
+    </div><br />
+    <div class="form-group">
+        <label class="col-lg-3 control-label">Telefono</label>
+        <div class="col-lg-8">
+            <input class="form-control" type="email" id="txttelefono" value="" placeholder="Telefono" />
+        </div>
+    </div><br />
+    <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-8">
+            <button id="btnRegistrar" type="button" class="btn btn-primary">Entrar</button>
+        </div>
+    </div><br />
+    <div class="form-group">
+        <label class="col-lg-3 control-label" id="lblResultado1"></label>
+    </div><br />
+</form>  
+
+
+
+
+    @*<br />
+    <div class="row">
+        <label>DNI</label>
+        <input type="text" id="txtdni2" />
+        <br />
+        <label>Nombre</label>
+        <input type="text" id="txtnombre" />
+        <br />
+        <label>Apellido</label>
+        <input type="text" id="txtapellido" />
+        <br />
+        <label>Dirección</label>
+        <input type="text" id="txtdireccion" />
+        <br />
+        <label>Telefono</label>
+        <input type="text" id="txttelefono" />
+        <br />
+        <input type="button" id="btnRegistrar" value="Registrar" />
+        <br />
+        <label id="lblResultado1"></label>
+    </div>*@
+
+
+
+    @section scripts{
+        <script>
+        $(function () {
+            $("#btnConsultar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("ConsultarDuenio", "Home")",
+                    data: { dni: $("#txtdni").val()},
+                    success: function (ret) {
+                        $("#lblResultado").text(ret);
+                    }
+                });
+            });
+            $("#btnRegistrar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("RegistrarDuenio", "Home")",
+                    data: { dni: $("#txtdni2").val(), nombre: $("#txtnombre").val(), apellido: $("#txtapellido").val(), direccion: $("#txtdireccion").val(), telefono: $("#txttelefono").val() },
+                    success: function (ret) {
+                        $("#lblResultado1").text(ret);
+                    }
+                });
+            });
+        });
+        </script>
+    }

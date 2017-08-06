@@ -17,7 +17,7 @@ namespace VeterinariaServices
         {
             //var duenio = listaDuenio.FirstOrDefault(x => x.dni == dniDuenio);
             var duenio = bd.Duenio.Find(dniDuenio);
-            return duenio == null ? "No esta registrado" : duenio.dni+" existe";
+            return duenio == null ? "No esta registrado" : "DNI: "+duenio.dni+" \nNombre : "+duenio.nombre+"\nApellido : "+duenio.apellido;
 
         }
 
@@ -25,7 +25,7 @@ namespace VeterinariaServices
         {
             //listaDuenio.Add(new Duenio() { dni = dni, nombre = nombre, direccion = direccion, telefono = telefono });
             bd.Duenio.Add(new Duenio() { dni = dni, nombre = nombre,apellido=apellido, direccion = direccion, telefono = telefono });
-            bd.SaveChangesAsync();
+            bd.SaveChanges();
         }
     }
 }

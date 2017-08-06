@@ -17,14 +17,14 @@ namespace VeterinariaServices
             var mascota = bd.Mascota.Where(c => c.dniDuenio == dniDuenio).First();
             //var mascota = bd.Mascota.Find(dniDuenio);
             //return duenio == null ? "No esta registrado" : duenio.dni + " existe";
-            return mascota == null ? "Informacion de la Mascota no encontrada" : mascota.nombre + " encontrado";
+            return mascota == null ? "Informacion de la Mascota no encontrada" : mascota.nombre;
         }
         
 
         public void registarMascota(string nombre, string raza, string sexo, int dniDuenio)
         {
             bd.Mascota.Add(new Mascota() { nombre = nombre, raza = raza, sexo = sexo, dniDuenio = dniDuenio });
-            bd.SaveChanges();
+            bd.SaveChangesAsync();
             //listaMascota.Add(new Mascota() { Nombre = nombre,Raza=raza,Sexo=sexo,dniDuenio=dniDuenio  });
 
         }

@@ -13,10 +13,10 @@ namespace VeterinariaServices
 
         // private List<Cita> listaCita = new List<Cita>();
         private HistoriaClinicaVeterinariaEntities1 bd = new HistoriaClinicaVeterinariaEntities1();
-        public int AsignarCita(int dniD,String fechaC,String horaC,int numC)
+        public String AsignarCita(string horaC, string fechaC, int dniD,string numC)
         {
-            bd.Cita.Add(new Cita() { dniDuenio = dniD, fecha = fechaC, hora = horaC, numeroConsultorio = ""+numC });
-            bd.SaveChanges();
+            bd.Cita.Add(new Cita() { hora = horaC, fecha = fechaC, dniDuenio = dniD,   numeroConsultorio = numC });
+            bd.SaveChangesAsync();
             //listaCita.Add(new Cita() {dniDuenio = dniD, fechaCita = fechaC,horaCita=horaC,numConsultorio=numC });
             return numC;
         }

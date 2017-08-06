@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="~/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="~/css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="screen" property="" />
+</head>
+<body>
+
+
+    <div class="w3ls-banner about-w3lsbanner">
+        <div class="w3lsbanner-info">
+            <!-- header -->
+            <div class="header">
+                <div class="container">
+                    <div class="agile_header_grid">
+                        <div class="header-mdl agileits-logo">
+                            <h1><a href="@Url.Action("Index", "Home" )">Best Pets</a></h1>
+                        </div>
+                        <div class="agileits_w3layouts_sign_in">
+                            <ul>
+                                <li>Call us : <span>(+00) 123 234</span></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="header-nav">
+                        <!-- header-two -->
+                        <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <!-- top-nav -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav cl-effect-16">
+                                    <li><a href="@Url.Action("Index", "Home" )" class="active" data-hover="Home">Home</a></li>
+                                    <li><a href="@Url.Action("Duenio", "Home" )" data-hover="About">Dueños</a></li>
+                                    <li><a href="@Url.Action("Mascota", "Home" )" data-hover="Gallery">Mascota</a></li>
+                                    <li><a href="@Url.Action("HistoriaClinica", "Home" )" data-hover="Contact">Historia Clinica</a></li>
+                                    <li><a href="@Url.Action("Cita", "Home" )" data-hover="Contact">Citas</a></li>
+                                    <li><a href="@Url.Action("Veterinario", "Home" )" data-hover="Contact">Veterinaria</a></li>
+                                    <li><a href="@Url.Action("Diagnostico", "Home" )" data-hover="Contact">Diagnostico</a></li>
+
+                                </ul>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- //header -->
+        </div>
+    </div>	
+
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Home" )" class="active" data-hover="Home">Home</a></li>
+                    <li><a href="@Url.Action("Duenio", "Home" )" data-hover="About">Dueños</a></li>
+                    <li><a href="@Url.Action("Mascota", "Home" )" data-hover="Gallery">Mascota</a></li>
+                    <li><a href="@Url.Action("HistoriaClinica", "Home" )" data-hover="Contact">Historia Clinica</a></li>
+                    <li><a href="@Url.Action("Cita", "Home" )" data-hover="Contact">Citas</a></li>
+                    <li><a href="@Url.Action("Veterinario", "Home" )" data-hover="Contact">Veterinaria</a></li>
+                    <li><a href="@Url.Action("Diagnostico", "Home" )" data-hover="Contact">Diagnostico</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>*@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

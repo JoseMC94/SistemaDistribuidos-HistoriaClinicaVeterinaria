@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Veterinario";
+}
+
+<h2>Veterinario</h2>
+
+<div class="row">
+    
+    <label>Nombre</label>
+    <input type="text" id="nombre" />
+    <br />
+    <label>Apellido</label>
+    <input type="text" id="apellido" />
+    <br />
+    <label>DNI</label>
+    <input type="text" id="dni" />
+    <br />
+    <label>Telefono</label>
+    <input type="text" id="telefono" />
+    <br />
+    <label>Dirección</label>
+    <input type="text" id="direccion" />
+    <br />
+    
+    <input type="button" id="btnRegistrar" value="Registrar" />
+    <br />
+    <label id="lblResultado1"></label>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnConsultar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("ConsultarDuenio", "Home")",
+                    data: { dni: $("#txtdni").val()},
+                    success: function (ret) {
+                        $("#lblResultado").text(ret);
+                    }
+                });
+            });
+            $("#btnRegistrar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("AgregarVeterinario", "Home")",
+                    data: { nombre: $("#nombre").val(), apellido: $("#apellido").val(), dni: $("#dni").val(), telefono: $("#telefono").val(), direccion: $("#direccion").val() },
+                    success: function (ret) {
+                        $("#lblResultado1").text(ret);
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c20aee3f-3261-479b-8132-fbcf7d76fc6a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/MascotaService/MascotaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MascotaService.xsd" MetadataType="Schema" ID="f27482ab-ec27-41a6-a72b-44c2cc388326" SourceId="1" SourceUrl="http://zeus/MascotaService/MascotaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MascotaService1.xsd" MetadataType="Schema" ID="d1958562-86d2-46db-9fbe-9bb0749746cb" SourceId="1" SourceUrl="http://zeus/MascotaService/MascotaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MascotaService.wsdl" MetadataType="Wsdl" ID="e98e0a8b-3af9-45d3-9b00-1dd1f98ddd09" SourceId="1" SourceUrl="http://zeus/MascotaService/MascotaService.svc?wsdl" />
+    <MetadataFile FileName="MascotaService.disco" MetadataType="Disco" ID="5de24ca0-9db9-4f2d-8488-7cf77349f596" SourceId="1" SourceUrl="http://zeus/MascotaService/MascotaService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

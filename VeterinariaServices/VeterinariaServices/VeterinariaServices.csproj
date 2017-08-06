@@ -109,7 +109,9 @@
     <Compile Include="VeterinarioService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="ModeloVeterinaria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModeloVeterinaria.Designer.cs</LastGenOutput>

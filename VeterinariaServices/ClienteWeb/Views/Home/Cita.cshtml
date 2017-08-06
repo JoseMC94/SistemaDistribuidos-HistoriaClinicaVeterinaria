@@ -1,0 +1,55 @@
+﻿
+<div class="container">
+    <p>
+        <label>fecha</label>
+        <input type="date" id="fecha" />
+    </p>
+    <br />
+    <p>
+        <label>hora</label>
+        <input type="text" id="hora" />
+    </p>
+    <br />
+    <p>
+        <label>dni</label>
+        <input type="text" id="dni" />
+    </p>
+    <br />
+    <p>
+        <label>Numero Consultorio</label>
+        <input type="text" id="numeroConsultorio" />
+    </p>
+    <br />
+    <p><input type="button" id="btnRegistrar" value="Registrar" />
+<br />
+<label id="lblResultado1"></label></p>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnConsultar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("ConsultarDuenio", "Home")",
+                    data: { dni: $("#txtdni").val()},
+                    success: function (ret) {
+                        $("#lblResultado").text(ret);
+                    }
+                });
+            });
+            $("#btnRegistrar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("AsignarCita", "Home")",
+                    data: { hora: $("#hora").val(), fecha: $("#fecha").val(), dni: $("#dni").val(), numeroConsultorio: $("#numeroConsultorio").val() },
+                    success: function (ret) {
+                        $("#lblResultado1").text(ret);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+

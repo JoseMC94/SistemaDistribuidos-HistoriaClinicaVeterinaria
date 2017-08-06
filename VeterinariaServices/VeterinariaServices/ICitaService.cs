@@ -11,6 +11,6 @@ namespace VeterinariaServices
     interface ICitaService
     {
         [OperationContract]
-        int AsignarCita(int dniD, String fechaC, String horaC, int numC); 
+        String AsignarCita(String horaC, String fechaC, int dniD,  String numC); 
     }
 }

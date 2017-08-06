@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Mascota";
+}
+
+<h2>Mascota</h2>
+
+
+<div class="row">
+    <label>Dni Duenio</label>
+    <input type="text" id="txtcodigo" />
+    <input type="button" id="btnConsultar" value="Consultar" />
+    <label id="lblResultado"></label>
+</div>
+
+<br />
+<div class="row">
+    <label>nombre</label>
+    <input type="text" id="nombre" />
+    <br />
+    <label>raza</label>
+    <input type="text" id="raza" />
+    <br />
+    <label>sexo</label>
+
+    <select id="sexo">
+        <option value="Macho">Macho</option>
+        <option value="Hembra">Hembra</option>
+    </select>
+    <br />
+    <label>DNI Dueño</label>
+    <input type="text" id="dniduenio" />
+    <br />
+    <input type="button" id="btnRegistrar" value="Registrar" />
+    <br />
+    <label id="lblResultado1"></label>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnConsultar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("Mostrarinfo", "Home")",
+                    data: { codigo: $("#txtcodigo").val()},
+                    success: function (ret) {
+                        $("#lblResultado").text(ret);
+                    }
+                });
+            });
+            $("#btnRegistrar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("RegistrarMascota", "Home")",
+                    data: { nombre: $("#nombre").val(), raza: $("#raza").val(), sexo: $("#sexo").val(), dni: $("#dniduenio").val() },
+                    success: function (ret) {
+                        $("#lblResultado1").text(ret);
+                    }
+                });
+            });
+        });
+    </script>
+}

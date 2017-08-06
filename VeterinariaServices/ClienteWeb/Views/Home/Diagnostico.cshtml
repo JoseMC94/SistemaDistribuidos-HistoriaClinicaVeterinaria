@@ -1,0 +1,48 @@
+﻿<h2>Diagnostico</h2>
+
+
+<div class="row">
+
+    <label>Enfermedad</label>
+    <input type="text" id="enfermedad" />
+    <br />
+    <label>Medicina</label>
+    <input type="text" id="medicina" />
+    <br />
+    <label>DNI Veterinario</label>
+    <input type="text" id="dniV" />
+    <br />
+    <label>Id Mascota</label>
+    <input type="text" id="mascota" />
+    
+    <input type="button" id="btnRegistrar" value="Registrar" />
+    <br />
+    <label id="lblResultado1"></label>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnConsultar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("ConsultarDuenio", "Home")",
+                    data: { dni: $("#txtdni").val()},
+                    success: function (ret) {
+                        $("#lblResultado").text(ret);
+                    }
+                });
+            });
+            $("#btnRegistrar").click(function () {
+                $.ajax({
+                    url: "@Url.Action("agregarDiagnostico", "Home")",
+                    data: { enfermedad: $("#enfermedad").val(), medicina: $("#medicina").val(), dniV: $("#dniV").val(), Idmascota: $("#mascota").val(), direccion: $("#direccion").val() },
+                    success: function (ret) {
+                        $("#lblResultado1").text(ret);
+                    }
+                });
+            });
+        });
+    </script>
+}
